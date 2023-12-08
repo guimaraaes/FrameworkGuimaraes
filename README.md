@@ -19,16 +19,11 @@ Um projeto PlatformIO tem uma estrutura de diretório padrão:
 
 ### 4. Adicionando o Framework Guimarães ao Seu Projeto
 Após configurar a estrutura básica do seu projeto Arduino com PlatformIO, você pode querer adicionar bibliotecas ou frameworks externos, como o framework Guimarães. Aqui estão os passos para adicionar o código do framework Guimarães ao diretório `lib/` do seu projeto:
-
-#### 4.1. **Acesse o Repositório do Framework Guimarães**:
-   - Vá para [framework-guimaraes](https://github.com/guimaraaes/framework-guimaraes.git) no GitHub.
-
-#### 4.2. **Clone ou Baixe o Repositório**:
-   - **Clone via Git**: Se você estiver familiarizado com o Git, pode clonar o repositório diretamente para o diretório `lib/` do seu projeto PlatformIO usando o comando:
-     ```
-     git clone https://github.com/guimaraaes/framework-guimaraes.git lib/framework-guimaraes
-     ```
-   - **Download Manual**: Alternativamente, você pode baixar o repositório como um arquivo ZIP e extrair o conteúdo manualmente na pasta `lib/framework-guimaraes` dentro do diretório do seu projeto PlatformIO.
+ - **Clone via Git**: Se você estiver familiarizado com o Git, pode clonar o repositório diretamente para o diretório `lib/` do seu projeto PlatformIO usando o comando:
+   ```
+   git clone https://github.com/guimaraaes/framework-guimaraes.git lib/framework-guimaraes
+   ```
+ - **ou Download Manual**: Alternativamente, você pode baixar o repositório como um arquivo ZIP e extrair o conteúdo manualmente na pasta `lib/framework-guimaraes` dentro do diretório do seu projeto PlatformIO.
 
 ### 5. Desenvolva Seu Código
 Com o ambiente configurado, você pode começar a desenvolver seu código Arduino no diretório `src/`.
