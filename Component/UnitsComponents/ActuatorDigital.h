@@ -30,7 +30,8 @@ public:
 
     void componentTest()
     {
-        Serial.println((String) "Begining component test to component in pin " + this->pin);
+        // Serial.println((String) "Begining component test to component in pin " + this->pin);
+        Serial.println((String) "Iniciando teste de componente no pino " + this->pin);
         this->assertValue(HIGH);
         this->assertValue(LOW);
         Serial.println();
@@ -39,10 +40,17 @@ public:
 
     void assertValue(int value)
     {
-        Serial.println((String) "--- Verify if within 2 seconds component is during 10 second with the value " + value);
+        // Serial.println((String) "--- Verify if within 2 seconds component is during 10 second with the value " + value);
+        Serial.println((String) "--- Verifique se em 2 segundos o componente está durante 10 segundos com o valor " + getValueString(value));
         delay(2000);
-        Serial.println("--- Component test result: you must assert. Wait to answer.");
+        // Serial.println("--- Component test result: you must assert. Wait to answer.");
+        Serial.println("--- Resultado do teste de componente: você deve afirmar. Aguarde para responder.");
         this->write(value);
         delay(10000);
+    }
+
+    String getValueString(int value)
+    {
+        return (value == HIGH) ? "HIGH" : "LOW";
     }
 };

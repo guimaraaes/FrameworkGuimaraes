@@ -32,14 +32,16 @@ public:
         Ultrasonic ultrasonic(this->pinTrigger, this->pinEcho);
         int distance = 0;
         distance = ultrasonic.read();
-        Serial.println((String) "--- Value readed: " + distance);
+        // Serial.println((String) "--- Value readed: " + distance);
+        Serial.println((String) "--- Valor lido ultrassônico: " + distance);
         this->addHistory(this->pin, distance);
         return distance;
     };
 
     void componentTest()
     {
-        Serial.println((String) "Begining component test to component in pin " + this->pin);
+        // Serial.println((String) "Begining component test to component in pin " + this->pin);
+        Serial.println((String) "Iniciando teste de componente no pino " + this->pin);
         this->assertValue(2);
         this->assertValue(20);
         this->assertValue(400);
@@ -50,13 +52,17 @@ public:
     void assertValue(int value)
     {
 
-        Serial.println((String) "--- Put within 10 seconds component with the value " + value);
+        // Serial.println((String) "--- Put within 10 seconds component with the value " + value);
+        Serial.println((String) "--- Coloque em 10 segundos o componente com o valor " + value);
         delay(10000);
         int valueReaded = this->read();
-        Serial.println("--- Component test result: you must assert. Wait to answer.");
+        // Serial.println("--- Component test result: you must assert. Wait to answer.");
+        Serial.println("--- Resultado do teste de componente: você deve afirmar. Aguarde para responder.");
         delay(2000);
-        Serial.println((String) "---- Value expected " + value);
-        Serial.println((String) "---- Value readed " + valueReaded);
+        // Serial.println((String) "---- Value expected " + value);
+        // Serial.println((String) "---- Value readed " + valueReaded);
+        Serial.println((String) "---- Valor esperado " + value);
+        Serial.println((String) "---- Valor lido " + valueReaded);
         delay(2000);
     }
 };

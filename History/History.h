@@ -17,7 +17,9 @@ public:
 
     void getHistory()
     {
-        Serial.println("---- begin history embedded system ----");
+        // Serial.println("---- begin history embedded system ----");
+        Serial.println("---- histórico do sistema embarcado ----");
+        Serial.println("----       tempo, pino, valor");
         Interaction *interaction;
         for (int i = 0; i < this->list.size(); i++)
         {
@@ -30,7 +32,8 @@ public:
 
             Serial.println(" ");
         }
-        Serial.println("---- end history embedded system ----");
+        // Serial.println("---- end history embedded system ----");
+        Serial.println("---- fim do histórico do sistema embarcado ----");
     }
 
     History(History &other) = delete;
