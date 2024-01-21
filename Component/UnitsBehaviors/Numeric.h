@@ -42,7 +42,7 @@ public:
         return this->findInteractionInViVf(Vi, Vf);
     };
 
-       bool isActuatorViVf(int Vi, int Vf)
+    bool isActuatorViVf(int Vi, int Vf)
     {
         Interaction *interaction = history->list.shift();
         return this->isInteractionInViVfAndPin(interaction, Vi, Vf, this->pin);
