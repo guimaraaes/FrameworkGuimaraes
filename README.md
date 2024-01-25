@@ -28,7 +28,7 @@ Após configurar a estrutura básica do seu projeto Arduino com PlatformIO, voc�
    git clone https://github.com/mmurdoch/arduinounit.git lib/ArduinoUnit
    ```
    
- - **ou Download Manual**: Alternativamente, você pode baixar o repositório como um arquivo ZIP e extrair o conteúdo manualmente na pasta `lib/FrameworkGuimaraes` dentro do diretório do seu projeto PlatformIO.
+ - **ou Download Manual**: Alternativamente, você pode baixar o repositório como um arquivo ZIP e extrair o conteúdo manualmente nas respectivas pastas da clonagem.
 
 
 ### 6. Teste a instação com o código Blink no código-fonte
