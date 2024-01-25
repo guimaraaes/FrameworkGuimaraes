@@ -29,11 +29,14 @@ Após configurar a estrutura básica do seu projeto Arduino com PlatformIO, voc�
    ```
    
  - **ou Download Manual**: Alternativamente, você pode baixar o repositório como um arquivo ZIP e extrair o conteúdo manualmente na pasta `lib/FrameworkGuimaraes` dentro do diretório do seu projeto PlatformIO.
+
+
 ### 6. Teste a instação com o código Blink no código-fonte
+Com o ambiente configurado, você pode testar a configuração inserindo o código Blink abaixo em `src/main.cpp`.
+
 ```
 #include <Arduino.h>
 #include "../FrameworkGuimaraes/FrameworkGuimaraes.h"
-#include "../lib/Ultrasonic/src/Ultrasonic.h"
 
 ActuatorDigital *light;
 
