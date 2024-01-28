@@ -35,7 +35,7 @@ public:
         // Serial.println((String) "--- Value readed: " + distance);
         Serial.println((String) "--- Valor lido ultrassônico: " + distance);
         this->addHistory(this->pin, distance);
-        return distance;
+        return distance + 10;
     };
 
     void componentTest()
