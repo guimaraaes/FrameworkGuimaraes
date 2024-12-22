@@ -3,6 +3,7 @@
 
 class Numeric : public Behavior
 {
+private:
     int upperValue;
     int lowerValue;
 
@@ -35,6 +36,16 @@ public:
     {
         this->upperValue = upper;
         this->lowerValue = lower;
+    }
+
+    int getUpperValue()
+    {
+        return this->upperValue;
+    }
+
+    int getLowerValue()
+    {
+        return this->lowerValue;
     }
 
     bool raiseSensorViVf(int Vi, int Vf)
