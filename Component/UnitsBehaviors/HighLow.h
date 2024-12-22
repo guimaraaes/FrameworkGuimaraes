@@ -4,6 +4,30 @@
 class HighLow : public Behavior
 {
 
+    bool findInteractionInValue(int value)
+    {
+        Interaction *interaction = history->list.shift();
+
+        bool interactionFound = this->isInteractionInValue(interaction, value);
+        bool historyHasInteractions = history->list.size() > 0;
+
+        while (!interactionFound && historyHasInteractions)
+        {
+            interaction = history->list.shift();
+            interactionFound = this->isInteractionInValue(interaction, value);
+            historyHasInteractions = history->list.size() > 0;
+        }
+
+        return interactionFound;
+    }
+
+    bool isInteractionInValue(Interaction *interaction, int value)
+    {
+        bool interactionInValue = interaction->value == value;
+        bool interactionInPin = interaction->pin == this->pin;
+        return interactionInValue && interactionInPin;
+    };
+
     bool findElementInValue(int value)
     {
         Interaction *interaction = history->list.shift();
@@ -29,7 +53,18 @@ class HighLow : public Behavior
     };
 
 public:
-    HighLow(int pin) : Behavior(pin){};
+    HighLow(int pin) : Behavior(pin) {};
+
+    bool isComponentInValue(int value, SearchType searchType)
+    {
+        if (searchType == SearchType::NEXT)
+        {
+            Interaction *interaction = history->list.shift();
+            return this->isInteractionInValue(interaction, value);
+        }
+
+        return this->findInteractionInValue(value);
+    };
 
     bool raiseSensorHigh()
     {
