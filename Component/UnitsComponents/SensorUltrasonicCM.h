@@ -31,7 +31,7 @@ public:
     {
         Ultrasonic ultrasonic(this->pinTrigger, this->pinEcho);
         int distance = 0;
-        distance = ultrasonic.read() + 10;
+        distance = ultrasonic.read();
         // Serial.println((String) "--- Value readed: " + distance);
         Serial.println((String) "--- Valor lido ultrassônico: " + distance);
         this->addHistory(this->pin, distance);
